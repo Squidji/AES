@@ -55,6 +55,8 @@ h1 {
 	right: 0;
 	left: 0;
 	font-size: 50px;
+	cursor: default;
+	transition: 0.5s;
 }
 
 #shortcuts {
