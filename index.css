@@ -3,11 +3,11 @@ body {
 	height: 90vh;
 	color: #fff;
 	font-family: 'Rajdhani', sans-serif;
-	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background: linear-gradient(-45deg, rgb(255, 60, 0), rgb(255, 0, 98), rgb(0, 187, 255), rgb(0, 255, 195));
 	background-size: 400% 400%;
-	-webkit-animation: Gradient 15s ease infinite;
-	-moz-animation: Gradient 15s ease infinite;
-	animation: Gradient 15s ease infinite;
+	-webkit-animation: Gradient 10s ease infinite;
+	-moz-animation: Gradient 10s ease infinite;
+	animation: Gradient 10s ease infinite;
 }
 
 @-webkit-keyframes Gradient {
@@ -53,7 +53,7 @@ h1 {
 	top: 20%;
 	right: 0;
 	left: 0;
-	font-size: 50px;
+	font-size: 60px;
 	cursor: default;
 	transition: 0.5s;
 }
@@ -67,21 +67,21 @@ h1 {
 }
 
 .box {
-	border: 2px solid white;
-	border-radius: 10px;
+	border: 3px solid white;
+	border-radius: 12px;
 	width: 200px;
 	height: 200px;
 	text-align: center;
 	display: inline-block;
 	vertical-align: middle;
-	font-size: 20px;
+	font-size: 23px;
 	line-height: 200px;
 	cursor: pointer;
-	transition: 0.3s;
+	transition: 0.4s;
 	margin-bottom: 10px;
 	margin-right: 10px;
 }
 .box:hover {
-	font-size: 30px;
-	border-radius: 50px;
+	font-size: 33px;
+	border-radius: 52px;
 }
