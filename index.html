@@ -2,34 +2,20 @@
 <html>
 <head>
 
-<title id='title'>AES</title>
-<meta charset="utf-8"/>
-<link rel="stylesheet" href="index.css">
-<link href="https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap" rel="stylesheet"> 
-<script src='index.js'></script>
+	<title id='title'>AES</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="index.css">
+	<link href="https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap" rel="stylesheet">
+	<script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
+	<script src='index.js'></script>
 
 </head>
 <body id='body'>
 
-<div id='editButton' onclick='setEdit("block")'>EDIT</div>
-
 <h1 id='header'>AES</h1>
-
 <div id='shortcuts'></div>
 
-<script>renderLynx()</script>
-
-<div id='editWindow'>
-	<div id='editWindowTop'>
-		<div id='back' onclick='renderCategories()'><b>BACK</b></div><div id='save' onclick='saveChanges();renderStyle();'><b>SAVE</b></div>
-		<div id='end' onclick='setEdit("none")'><b>CLOSE</b></div>
-	</div>
-	<div id='editWindowBody'>
-	</div>
-	<div class='cat' id='reset' onclick='resetStyle()'>Reset Styling</div>
-</div>
-
-<script>renderCategories();renderStyle();</script>
+<script>renderLinks()</script>
 
 </body>
 </html>
