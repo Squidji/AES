@@ -107,4 +107,33 @@ body.psn5 #menubutton {
 		rotate: -10deg;
 		transform: skewX(10deg);
 	}
-};
+}
+
+body.rtro {
+	font-family: retro;
+	background-color: black;
+}
+body.rtro h1 {
+	font-size: 80px;
+	top: 15%;
+}
+body.rtro .link {
+	border-radius: 0;
+	border: solid 6px #8f8f8f;
+	color: #8f8f8f;
+	font-size: 40px;
+	transition: 0s;
+}
+body.rtro .link:hover {
+	border-color: white;
+	color: white;
+}
+body.rtro #menubutton {
+	margin-right: 10px;
+	margin-top: 0;
+	font-size: 30px;
+	color: #8f8f8f8f;
+}
+body.rtro #menubutton:hover {
+	color: white;
+}

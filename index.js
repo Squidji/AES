@@ -13,13 +13,30 @@ var currentsave = {
 };
 
 function renderLinks() {
+	$('#shortcuts').html('');
+	$('#links .linklist').html('');
 	for (let n=0; n<2; n++) {
 		for (let i=0; i<currentsave.links[n].length; i++) {
+			
 			let l = currentsave.links[n][i];
+
+			// Shortcuts
 			let d = $('<div>').text( l.name );
 			d.addClass('link');
 			d.click(function () { window.open(l.url, '_blank'); });
 			$('#shortcuts').append(d);
+
+			// Links Menu
+			let a = $('<div>').addClass('label');
+			a.append( $('<b>').text('X').addClass('del').click( function() {
+				currentsave.links[n].splice(i, 1); renderLinks();
+			}));
+			a.append( $('<b>').text('✎').addClass('edt') );
+			a.append( $('<b>').text('⬇').addClass('mov') );
+			a.append( $('<b>').text('⬆').addClass('mov') );
+			a.append( $('<div>').text(l.name) );
+			$('#row' + (n+1) + 'linklist').append(a);
+
 		};
 		$('#shortcuts').append( $('<br>') );
 	};

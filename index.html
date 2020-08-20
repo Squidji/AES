@@ -24,8 +24,8 @@
 		<div class='topbutton close' onclick='toggleMenu()'>CLOSE</div>
 		<div class='header'>AES</div>
 		<div class='itemslist'>
-		<!--<div onclick='openMenu("links")'>Links</div>
-			<div onclick='openMenu("modules")'>Modules</div> -->
+			<div onclick='openMenu("links")'>Links</div>
+		<!--<div onclick='openMenu("modules")'>Modules</div> -->
 			<div onclick='openMenu("themes")'>Themes</div>
 		<!--<div onclick='openMenu("customcss")'>Custom CSS</div> -->
 			<div onclick='saveSettings()' id='savebutton'>Save Settings</div>
@@ -34,7 +34,18 @@
 
 	<div id='links' class='menupage'>
 		<div class='topbutton' onclick='openMenu("home")'>BACK</div>
-		<div class='header'>LINKS</div>
+		<div class='header'>ROW 1</div>
+		<div class='linklist' id='row1linklist'>
+
+		</div>
+		<div class='header'>ROW TWO</div>
+		<div class='linklist' id='row2linklist'>
+
+		</div>
+	</div>
+
+	<div id='linkedit' class='menupage'>
+		
 	</div>
 
 	<div id='modules' class='menupage'>
@@ -49,6 +60,7 @@
 			<div class='aesx' onclick='setTheme("aesx")'>AES X</div>
 			<div class='aesc' onclick='setTheme("aesc")'>AES Classic</div>
 			<div class='psn5' onclick='setTheme("psn5")'>Persona 5</div>
+			<div class='rtro' onclick='setTheme("rtro")'>Retro</div>
 		</div>
 	</div>
 
