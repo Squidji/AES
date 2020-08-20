@@ -29,9 +29,18 @@ h1 {
 	right: 5%;
 }
 
+#menubutton {
+	position: absolute;
+	font-size: 20px;
+	top: 0;
+	right: 0;
+	margin: 5px;
+	cursor: pointer;
+}
+
 .link {
 	border: 3px solid white;
-	border-radius: 12px;
+	border-radius: 16px;
 	width: 150px;
 	height: 150px;
 	text-align: center;
@@ -47,10 +56,135 @@ h1 {
 }
 .link:hover {
 	font-size: 20px;
-	border-radius: 52px;
+	border-radius: 42px;
+}
+
+#menu {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	bottom: 20%;
+	width: 350px;
+	border-radius: 20px;
+	background-color: #eee;
+	display: none;
+	color: black;
+	overflow: hidden;
+	animation: fadeIn 0.2s;
+	font-family: 'Lexend Tera', sans-serif;
+}
+
+#menu .topbutton {
+	width: 350px;
+	border-radius: 20px 20px 0 0;
+	background-color: #707070;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 22px;
+	cursor: pointer;
+	transition: 0.4s;
+	display: block;
+	color: white;
+}
+#menu .topbutton:hover {
+	background-color: #353535;
+	letter-spacing: 3px;
+}
+#menu .topbutton.close:hover {background-color: #eb0000;}
+
+#menu .header {
+	margin: 0;
+	width: 350px;
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	font-size: 35px;
+	font-weight: bold;
+	display: block;
+	border: 0 solid #707070;
+	border-width: 2px 0;
+	cursor: default;
+}
+
+#menu .itemslist div {
+	width: 310px;
+	border-bottom: 2px solid #cecece;
+	height: 60px;
+	font-size: 20px;
+	padding-left: 20px;
+	line-height: 60px;
+	cursor: pointer;
+	padding-right: 20px;
+	transition: 0.2s;
+}
+#menu .itemslist div:hover {
+	width: 300px;
+	padding-right: 30px;
+}
+#menu .itemslist div::after {
+	content: '➤';
+	float: right;
+}
+#menu .itemslist div#savebutton::after {
+	content: '✎';
+	font-size: 25px;
+}
+
+#menu .themelist div {
+	width: 350px;
+	text-align: center;
+	font-size: 30px;
+	height: 70px;
+	line-height: 70px;
+	border-bottom: 2px solid #eee;
+	cursor: pointer;
+	transition: 0.3s;
+}
+#menu .themelist div:hover {
+	letter-spacing: 3px;
+}
+
+#menu .themelist div.aesx {
+	background-color: #444;
+	color: white;
+	font-weight: bold;
+	font-family: 'Lexend Tera', sans-serif;
+}
+#menu .themelist div.aesc {
+	background: linear-gradient(-45deg, rgb(255, 0, 98), rgb(0, 187, 255));
+	color: white;
+	font-family: Rajdhani;
+	font-size: 40px;
+}
+#menu .themelist div.psn5 {
+	font-family: EarwigFactory;
+	background-color: red;
+	color: white;
+	text-shadow: black 2px 2px;
+	font-size: 40px;
+}
+#menu .themelist div.psn5:hover {
+	letter-spacing: 0;
+	text-shadow: black 4px 4px;
 }
 
 @keyframes fadeIn {
 	from {opacity: 0;}
 	to {opacity: 1;}
+}
+
+@font-face {
+	font-family: Rajdhani;
+	src: url(./fonts/Rajdhani-Regular.ttf)
+}
+
+@font-face {
+	font-family: EarwigFactory;
+	src: url(./fonts/earwig\ factory\ rg.ttf);
+}
+
+@font-face {
+	font-family: Persona5;
+	src: url(./fonts/p5hatty.ttf);
 }

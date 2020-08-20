@@ -1,0 +1,110 @@
+body.aesc {
+	background: linear-gradient(-45deg, #ff0040, #ff009d, #00bbff, #00ffc3);
+	background-size: 500%;
+	font-family: Rajdhani;
+	animation: aescMove 9s infinite;
+}
+body.aesc h1 {font-weight: normal;}
+body.aesc .link {
+	font-size: 20px;
+	border-radius: 12px;
+	margin: 5px;
+}
+body.aesc .link:hover {
+	font-size: 30px;
+	border-radius: 40px;
+}
+@keyframes aescMove {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+body.psn5 {
+	background-image: url('./img/persona.jpg');
+	font-family: Persona5;
+}
+body.psn5 h1 {
+	font-size: 80px;
+	font-family: EarwigFactory;
+	text-shadow: black 3px 0, black -3px 0, black 0 3px, black 0 -3px, 
+		black 3px 3px, black -3px -3px, black 3px -3px, black -3px 3px;
+	top: 11%;
+}
+body.psn5 .link {
+	box-shadow: black 3px 0, black -3px 0, black 0 3px, black 0 -3px, 
+		black 3px 3px, black -3px -3px, black 3px -3px, black -3px 3px;
+	font-size: 40px;
+	text-shadow: black 3px 0, black -3px 0, black 0 3px, black 0 -3px, 
+		black 3px 3px, black -3px -3px, black 3px -3px, black -3px 3px;
+	border-radius: 0;
+	rotate: 2deg;
+	position: relative;
+}
+body.psn5 .link:hover {
+	letter-spacing: 2px;
+	border-color: aqua;
+}
+body.psn5 .link::after {
+	display: block;
+	z-index: -1;
+	background-color: none;
+	width: 150px;
+	height: 50px;
+	content: '0';
+	font-size: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+body.psn5 .link:hover::after {
+	background-color: aqua;
+	animation: psn5Hover .3s infinite;
+	opacity: .8;
+}
+body.psn5 #menubutton {
+	text-shadow: black 3px 0, black -3px 0, black 0 3px, black 0 -3px, 
+		black 3px 3px, black -3px -3px, black 3px -3px, black -3px 3px;
+	font-size: 25px;
+	margin-right: 10px;
+}
+@keyframes psn5Hover {
+	0% {
+		top: 35px;
+		left: 10px;
+		rotate: -10deg;
+		transform: skewX(10deg);
+	}
+	25% {
+		top: 40px;
+		left: -20px;
+		rotate: 0;
+		transform: skewX(-10deg);
+	}
+	50% {
+		top: 55px;
+		left: -15px;
+		rotate: -5deg;
+		transform: skewX(10deg);
+	}
+	70% {
+		top: 45px;
+		left: 20px;
+		rotate: 20px;
+		transform: skewX(-10deg);
+	}
+	100% {
+		top: 35px;
+		left: 10px;
+		rotate: -10deg;
+		transform: skewX(10deg);
+	}
+};

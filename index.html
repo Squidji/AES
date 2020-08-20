@@ -3,19 +3,63 @@
 <head>
 
 	<title id='title'>AES</title>
-	<meta charset="utf-8"/>
-	<link rel="stylesheet" href="index.css">
-	<link href="https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap" rel="stylesheet">
+	<meta charset='utf-8'/>
+	<link href='./index.css' rel='stylesheet'>
+	<link href='./themes.css' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap' rel='stylesheet'>
 	<script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
 	<script src='index.js'></script>
 
 </head>
-<body id='body'>
+<body class='aesx'>
 
-<h1 id='header'>AES</h1>
+<div id='menubutton' onclick='toggleMenu()'>MENU</div>
+
+<h1>AES</h1>
 <div id='shortcuts'></div>
 
-<script>renderLinks()</script>
+<div id='menu'>
+	
+	<div id='home' class='menupage'>
+		<div class='topbutton close' onclick='toggleMenu()'>CLOSE</div>
+		<div class='header'>AES</div>
+		<div class='itemslist'>
+		<!--<div onclick='openMenu("links")'>Links</div>
+			<div onclick='openMenu("modules")'>Modules</div> -->
+			<div onclick='openMenu("themes")'>Themes</div>
+		<!--<div onclick='openMenu("customcss")'>Custom CSS</div> -->
+			<div onclick='saveSettings()' id='savebutton'>Save Settings</div>
+		</div>
+	</div>
+
+	<div id='links' class='menupage'>
+		<div class='topbutton' onclick='openMenu("home")'>BACK</div>
+		<div class='header'>LINKS</div>
+	</div>
+
+	<div id='modules' class='menupage'>
+		<div class='topbutton' onclick='openMenu("home")'>BACK</div>
+		<div class='header'>MODULES</div>
+	</div>
+
+	<div id='themes' class='menupage'>
+		<div class='topbutton' onclick='openMenu("home")'>BACK</div>
+		<div class='header'>THEMES</div>
+		<div class='themelist'>
+			<div class='aesx' onclick='setTheme("aesx")'>AES X</div>
+			<div class='aesc' onclick='setTheme("aesc")'>AES Classic</div>
+			<div class='psn5' onclick='setTheme("psn5")'>Persona 5</div>
+		</div>
+	</div>
+
+	<div id='customcss' class='menupage'>
+		<div class='topbutton' onclick='openMenu("home")'>BACK</div>
+		<div class='header'>CUSTOM CSS</div>
+	</div>
+
+</div>
+
+<script>loadSettings();</script>
 
 </body>
 </html>
