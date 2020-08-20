@@ -29,12 +29,13 @@
 			<div onclick='openMenu("themes")'>Themes</div>
 		<!--<div onclick='openMenu("customcss")'>Custom CSS</div> -->
 			<div onclick='saveSettings()' id='savebutton'>Save Settings</div>
+		<!--<div id='resetbutton'>Reset Settings</div> -->
 		</div>
 	</div>
 
 	<div id='links' class='menupage'>
 		<div class='topbutton' onclick='openMenu("home")'>BACK</div>
-		<div class='header'>ROW 1</div>
+		<div class='header'>ROW ONE</div>
 		<div class='linklist' id='row1linklist'>
 
 		</div>
@@ -42,10 +43,16 @@
 		<div class='linklist' id='row2linklist'>
 
 		</div>
+		<div class='itemslist'>
+			<div id='createlink'>Create Link</div>
+		</div>
 	</div>
 
 	<div id='linkedit' class='menupage'>
-		
+		<div class='topbutton'>SAVE</div>
+		<div class='header'>EDIT LINK</div>
+		<div class='inputlabel'>Label: </div><input type='text' id='label'>
+		<div class='inputlabel'>URL: </div><input type='text' id='url'>
 	</div>
 
 	<div id='modules' class='menupage'>
@@ -61,6 +68,8 @@
 			<div class='aesc' onclick='setTheme("aesc")'>AES Classic</div>
 			<div class='psn5' onclick='setTheme("psn5")'>Persona 5</div>
 			<div class='rtro' onclick='setTheme("rtro")'>Retro</div>
+			<div class='spor' onclick='setTheme("spor")'>SPICE ORANGE</div>
+			<div class='konb' onclick='setTheme("konb")'>K-ON!</div>
 		</div>
 	</div>
 

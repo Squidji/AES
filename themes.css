@@ -137,3 +137,38 @@ body.rtro #menubutton {
 body.rtro #menubutton:hover {
 	color: white;
 }
+
+body.spor {
+	font-family: CubicGame;
+	background: #e79523;
+	background-size: cover;
+	background-repeat: none;
+}
+body.spor #shortcuts {
+	background: linear-gradient(to bottom, #d3d3d3 70%, #a9a9a9);
+	padding: 20px 0;
+	border: 2px solid #a9a9a9;
+	border-radius: 5px;
+}
+body.spor .link {
+	text-transform: lowercase;
+	border-radius: 100px;
+	font-size: 25px;
+	background-color: black;
+	border: #a9a9a9 solid 4px;
+}
+body.spor .link:hover {
+	font-size: 30px;
+}
+
+body.konb {
+	background-image: url('./img/kon.png');
+	font-family: KOnTitle;
+	color: red;
+	text-shadow: #fffdae 3px 0, #fffdae -3px 0, #fffdae 0 3px, #fffdae 0 -3px, 
+		#fffdae 3px 3px, #fffdae -3px -3px, #fffdae 3px -3px, #fffdae -3px 3px;
+}
+body.konb .link {
+	background-color: #0000008e;
+	border-color: #fffdae;
+}

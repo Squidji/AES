@@ -31,15 +31,60 @@ function renderLinks() {
 			a.append( $('<b>').text('X').addClass('del').click( function() {
 				currentsave.links[n].splice(i, 1); renderLinks();
 			}));
-			a.append( $('<b>').text('✎').addClass('edt') );
-			a.append( $('<b>').text('⬇').addClass('mov') );
-			a.append( $('<b>').text('⬆').addClass('mov') );
+			a.append( $('<b>').text('✎').addClass('edt').click( function() {
+				openMenu('linkedit');
+				$('#linkedit #label').val(l.name);
+				$('#linkedit #url').val(l.url);
+
+				$('#linkedit .topbutton').click( function () {
+					currentsave.links[n][i].name = $('#linkedit #label').val();
+					currentsave.links[n][i].url  = $('#linkedit #url').val();
+					renderLinks();
+					$('#linkedit .topbutton').off();
+					openMenu('links');
+				});
+
+			}));
+			a.append( $('<b>').text('⬇').addClass('mov').click( function() {
+				if (i === currentsave.links[n].length - 1) { // last in list
+					if (n === 0) { // is row 1
+						currentsave.links[1].unshift(l);
+						currentsave.links[0].pop();
+					};
+				} else {
+					let thislink = l;
+					let underlink = currentsave.links[n][i+1];
+					currentsave.links[n][i] = underlink;
+					currentsave.links[n][i+1] = thislink;
+				};
+				renderLinks();
+
+			}));
+			a.append( $('<b>').text('⬆').addClass('mov').click( function() {
+				if (i === 0) { // first in list
+					if (n === 1) { // is row 2
+						currentsave.links[0].push(l);
+						currentsave.links[1].shift();
+					};
+				} else {
+					let thislink = l;
+					let abovelink = currentsave.links[n][i-1];
+					currentsave.links[n][i] = abovelink;
+					currentsave.links[n][i-1] = thislink;
+				};
+				renderLinks();
+
+			}));
 			a.append( $('<div>').text(l.name) );
 			$('#row' + (n+1) + 'linklist').append(a);
 
 		};
 		$('#shortcuts').append( $('<br>') );
 	};
+	$('#createlink').off();
+	$('#createlink').click(function() {
+		currentsave.links[1].push({name: 'New', url: ' '});
+	});
 };
 
 function toggleMenu() {

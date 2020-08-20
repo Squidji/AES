@@ -72,6 +72,11 @@ h1 {
 	overflow: hidden;
 	animation: fadeIn 0.2s;
 	font-family: 'Lexend Tera', sans-serif;
+	text-shadow: none;
+}
+
+#menu .menupage {
+	animation: fadeIn 0.3s;
 }
 
 #menu .topbutton {
@@ -126,15 +131,15 @@ h1 {
 	content: '➤';
 	float: right;
 }
-#menu .itemslist div#savebutton {
+#menu .itemslist div#savebutton, #menu .itemslist div#resetbutton {
 	text-align: center;
 	padding-right: 20px;
 	width: 310px;
 }
-#menu .itemslist div#savebutton:hover {
+#menu .itemslist div#savebutton:hover, #menu .itemslist div#resetbutton:hover {
 	letter-spacing: 2px;
 }
-#menu .itemslist div#savebutton::after {content: '';}
+#menu .itemslist div#savebutton::after, #menu .itemslist div#resetbutton::after {content: '';}
 
 #menu .linklist div {
 	width: 320px;
@@ -164,6 +169,18 @@ h1 {
 #menu .linklist .del:hover {color: #ff0000;}
 #menu .linklist .edt:hover {color: #06b900;}
 
+#menu .inputlabel {
+	width: 100px;
+	display: inline-block;
+	font-size: 20px;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+#menu input {
+	width: 200px;
+	margin: 0 10px;
+}
+
 #menu .themelist div {
 	width: 350px;
 	text-align: center;
@@ -190,19 +207,33 @@ h1 {
 	font-size: 40px;
 }
 #menu .themelist div.psn5 {
-	font-family: EarwigFactory;
+	font-family: Persona5;
 	background-color: red;
 	text-shadow: black 2px 2px;
 	font-size: 40px;
+	text-shadow: black 3px 0, black -3px 0, black 0 3px, black 0 -3px, 
+		black 3px 3px, black -3px -3px, black 3px -3px, black -3px 3px;
 }
 #menu .themelist div.psn5:hover {
-	letter-spacing: 0;
-	text-shadow: black 4px 4px;
+	color: aqua;
+	letter-spacing: 2px;
 }
 #menu .themelist div.rtro {
 	font-family: retro;
 	background-color: black;
 	font-size: 50px;
+}
+#menu .themelist div.spor {
+	background: linear-gradient(#fcab36, #e08a11);
+	font-family: CubicGame;
+}
+#menu .themelist div.konb {
+	font-family: KOnTitle;
+	color: red;
+	text-shadow: #fffdae 3px 0, #fffdae -3px 0, #fffdae 0 3px, #fffdae 0 -3px, 
+		#fffdae 3px 3px, #fffdae -3px -3px, #fffdae 3px -3px, #fffdae -3px 3px;
+	background-color: #2071c2;
+	background: linear-gradient(to bottom, #48a3ff, #2071c2)
 }
 
 @keyframes fadeIn {
@@ -228,4 +259,19 @@ h1 {
 @font-face {
 	font-family: retro;
 	src: url(./fonts/Pixelboy.ttf)
+}
+
+@font-face {
+	font-family: CubicGame;
+	src: url(./fonts/CubicGame.ttf);
+}
+
+@font-face {
+	font-family: KOnTitle;
+	src: url(./fonts/kontitle.ttf);
+}
+
+@font-face {
+	font-family: KOnBody;
+	src: url(./fonts/keionbu.ttf);
 }
