@@ -165,10 +165,160 @@ body.konb {
 	background-image: url('./img/kon.png');
 	font-family: KOnTitle;
 	color: red;
-	text-shadow: #fffdae 3px 0, #fffdae -3px 0, #fffdae 0 3px, #fffdae 0 -3px, 
-		#fffdae 3px 3px, #fffdae -3px -3px, #fffdae 3px -3px, #fffdae -3px 3px;
+	text-shadow: #fffdae 2px 0, #fffdae -2px 0, #fffdae 0 2px, #fffdae 0 -2px, 
+		#fffdae 2px 2px, #fffdae -2px -2px, #fffdae 2px -2px, #fffdae -2px 2px;
 }
 body.konb .link {
 	background-color: #0000008e;
 	border-color: #fffdae;
+}
+
+body.vapo {
+	background-image: url('./img/vapor.jpg');
+	font-family: Arial, sans-serif;
+}
+body.vapo h1 {
+	font-family: Vaporwave;
+	color: black;
+	text-shadow: aqua -1px -1px, red 1px 1px;
+	font-size: 70px;
+	top: 10%;
+}
+body.vapo #menubutton {
+	letter-spacing: 4px;
+	color: black;
+	text-shadow: aqua -1px -1px, red 1px 1px;
+}
+body.vapo .link {
+	background-image: url('./img/checker.png');
+	background-position: center center;
+	background-size: 200%;
+	font-weight: bolder;
+	color: black;
+	text-shadow: aqua -1px -1px, red 1px 1px;
+	letter-spacing: 4px;
+	font-size: 21px;
+	box-shadow: aqua -1px -1px, red 1px 1px;
+	border-width: 0;
+	opacity: 0.6;
+	border-radius: 0;
+}
+body.vapo .link:hover {
+	letter-spacing: 6px;
+	opacity: 1;
+	border-radius: 100%;
+}
+
+body.psn3 {
+	background-color: #021d32;
+	font-family: KOnTitle;
+}
+body.psn3::after {
+	display: block;
+	background-color: #ffcb61;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 80px;
+	content: '';
+	z-index: -1;
+}
+body.psn3 #shortcuts {
+	width: 250px;
+	position: fixed;
+	top: 110px;
+	left: 0;
+	bottom: 100px;
+}
+body.psn3 h1 {
+	font-size: 70px;
+	color: #ffcb61;
+	top: 10px;
+	margin: 0;
+	left: 70px;
+	text-align: left;
+	width: 50%;
+}
+body.psn3 h1::after {
+	content: '';
+	position: fixed;
+	display: block;
+	border-radius: 100%;
+	background-color: #0e8bec;
+	width: 300%;
+	left: -200%;
+	top: -50%;
+	z-index: -1;
+	height: 500%;
+}
+body.psn3 #menubutton::after {
+	content: '';
+	position: fixed;
+	display: block;
+	width: 384px;
+	height: 768px;
+	background-image: url('./img/P3PROT.png');
+	background-size: cover;
+	bottom: 0;
+	right: 0;
+}
+body.psn3 .link {
+	border-width: 0;
+	position: relative;
+	line-height: 40px;
+	height: 40px;
+	background-color: #00000000;
+	color: #004d77;
+	border-radius: 0 7px 7px 0;
+	font-size: 25px;
+	width: 160px;
+	padding-left: 90px;
+	margin-left: 0;
+	text-align: left;
+	transition: 0.2s;
+	margin-top: 0;
+}
+body.psn3 .link:hover {
+	background-color: #004d77;
+	color: white;
+}
+body.psn3 .link::after {
+	content: '';
+	display: block;
+	background-color: #004d77;
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	top: 7.5px;
+	left: 40px;
+}
+body.psn3 .link:hover::after {background-color: #ffcb61}
+
+body.star {
+	font-family: Stars;
+	background-image: url('./img/space.jpg');
+}
+body.star .link {
+	border-width: 1px;
+	color: #20ff51;
+	border-color: #20ff51;
+	opacity: 0.6;
+	font-size: 30px;
+}
+body.star .link:hover {
+	color: #06200c;
+	background-color: white;
+	border-color: white;
+	opacity: 1;
+}
+
+body.spgh {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	background-image: url('./img/spaghetti.png');
+	text-shadow: black 1px 0, black -1px 0, black 0 1px, black 0 -1px, 
+		black 1px 1px, black -1px -1px, black 1px -1px, black -1px 1px;
+}
+body.spgh .link{
+	font-size: 30px;
 }

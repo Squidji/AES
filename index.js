@@ -6,8 +6,7 @@ var currentsave = {
 			{name: 'BVT', url: 'https://www.valleytech.k12.ma.us/'}
 		],
 		[
-			{name: 'Discord', url: 'https://discordapp.com/channels/@me'},
-			{name: 'Canvas', url: 'https://blackstonevalleyregional.instructure.com/'}
+
 		]
 	]
 };
@@ -30,6 +29,7 @@ function renderLinks() {
 			let a = $('<div>').addClass('label');
 			a.append( $('<b>').text('X').addClass('del').click( function() {
 				currentsave.links[n].splice(i, 1); renderLinks();
+				saveSettings();
 			}));
 			a.append( $('<b>').text('✎').addClass('edt').click( function() {
 				openMenu('linkedit');
@@ -43,6 +43,7 @@ function renderLinks() {
 					$('#linkedit .topbutton').off();
 					openMenu('links');
 				});
+				saveSettings();
 
 			}));
 			a.append( $('<b>').text('⬇').addClass('mov').click( function() {
@@ -58,6 +59,7 @@ function renderLinks() {
 					currentsave.links[n][i+1] = thislink;
 				};
 				renderLinks();
+				saveSettings();
 
 			}));
 			a.append( $('<b>').text('⬆').addClass('mov').click( function() {
@@ -73,6 +75,7 @@ function renderLinks() {
 					currentsave.links[n][i-1] = thislink;
 				};
 				renderLinks();
+				saveSettings();
 
 			}));
 			a.append( $('<div>').text(l.name) );
@@ -81,10 +84,6 @@ function renderLinks() {
 		};
 		$('#shortcuts').append( $('<br>') );
 	};
-	$('#createlink').off();
-	$('#createlink').click(function() {
-		currentsave.links[1].push({name: 'New', url: ' '});
-	});
 };
 
 function toggleMenu() {
@@ -102,12 +101,13 @@ function setTheme(theme) {
 	$('body').removeClass();
 	$('body').addClass(theme);
 	currentsave.theme = theme;
+	saveSettings();
 };
 
 function saveSettings() {
 	localStorage.setItem('saveslot', JSON.stringify(currentsave));
-	$('#savebutton').css('background-color', '#59e03e');
-	setTimeout( function() { $('#savebutton').css('background-color', '#eee'); }, 200);
+	//$('#savebutton').css('background-color', '#59e03e');
+	//setTimeout( function() { $('#savebutton').css('background-color', '#eee'); }, 200);
 };
 
 function loadSettings() {

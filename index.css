@@ -27,6 +27,7 @@ h1 {
 	top: 40%;
 	left: 5%;
 	right: 5%;
+	transition: 0.3s;
 }
 
 #menubutton {
@@ -73,6 +74,7 @@ h1 {
 	animation: fadeIn 0.2s;
 	font-family: 'Lexend Tera', sans-serif;
 	text-shadow: none;
+	border: #707070 solid 3px;
 }
 
 #menu .menupage {
@@ -81,7 +83,7 @@ h1 {
 
 #menu .topbutton {
 	width: 350px;
-	border-radius: 20px 20px 0 0;
+	border-radius: 15px 15px 0 0;
 	background-color: #707070;
 	height: 50px;
 	line-height: 50px;
@@ -230,11 +232,37 @@ h1 {
 #menu .themelist div.konb {
 	font-family: KOnTitle;
 	color: red;
-	text-shadow: #fffdae 3px 0, #fffdae -3px 0, #fffdae 0 3px, #fffdae 0 -3px, 
-		#fffdae 3px 3px, #fffdae -3px -3px, #fffdae 3px -3px, #fffdae -3px 3px;
+	text-shadow: #fffdae 2px 0, #fffdae -2px 0, #fffdae 0 2px, #fffdae 0 -2px, 
+		#fffdae 2px 2px, #fffdae -2px -2px, #fffdae 2px -2px, #fffdae -2px 2px;
 	background-color: #2071c2;
 	background: linear-gradient(to bottom, #48a3ff, #2071c2)
 }
+#menu .themelist div.vapo {
+	background-image: url('./img/vapor.jpg');
+	font-family: Vaporwave;
+	text-shadow: aqua -1px -1px, red 1px 1px;
+}
+#menu .themelist div.psn3 {
+	background-color: #003d5e;
+	color: #24d1ff;
+	font-family: Persona3;
+}
+#menu .themelist div.star {
+	background-image: url('./img/space.jpg');
+	background-size: cover;
+	font-family: Stars;
+	font-size: 40px;
+}
+#menu .themelist div.spgh {
+	background-image: url('./img/spaghetti.png');
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	background-size: cover;
+	color: white;
+	text-shadow: black 1px 0, black -1px 0, black 0 1px, black 0 -1px, 
+		black 1px 1px, black -1px -1px, black 1px -1px, black -1px 1px;
+}
+
+#menu #themes, #menu #links {overflow: hidden; overflow-y: scroll; height: 100%;}
 
 @keyframes fadeIn {
 	from {opacity: 0;}
@@ -274,4 +302,19 @@ h1 {
 @font-face {
 	font-family: KOnBody;
 	src: url(./fonts/keionbu.ttf);
+}
+
+@font-face {
+	font-family: Vaporwave;
+	src: url(./fonts/Outrun-future.ttf);
+}
+
+@font-face {
+	font-family: Persona3;
+	src: url(./fonts/Persona3.ttf);
+}
+
+@font-face {
+	font-family: Stars;
+	src: url(./fonts/Atures.ttf);
 }

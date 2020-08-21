@@ -28,7 +28,7 @@
 		<!--<div onclick='openMenu("modules")'>Modules</div> -->
 			<div onclick='openMenu("themes")'>Themes</div>
 		<!--<div onclick='openMenu("customcss")'>Custom CSS</div> -->
-			<div onclick='saveSettings()' id='savebutton'>Save Settings</div>
+		<!--<div onclick='saveSettings()' id='savebutton'>Save Settings</div> -->
 		<!--<div id='resetbutton'>Reset Settings</div> -->
 		</div>
 	</div>
@@ -44,7 +44,7 @@
 
 		</div>
 		<div class='itemslist'>
-			<div id='createlink'>Create Link</div>
+			<div id='createlink' onclick="currentsave.links[1].push({name: 'New', url: ''});renderLinks();">Create Link</div>
 		</div>
 	</div>
 
@@ -66,9 +66,13 @@
 		<div class='themelist'>
 			<div class='aesx' onclick='setTheme("aesx")'>AES X</div>
 			<div class='aesc' onclick='setTheme("aesc")'>AES Classic</div>
-			<div class='psn5' onclick='setTheme("psn5")'>Persona 5</div>
 			<div class='rtro' onclick='setTheme("rtro")'>Retro</div>
+			<div class='vapo' onclick='setTheme("vapo")'>Vaporwave</div>
+			<div class='star' onclick='setTheme("star")'>Stars</div>
 			<div class='spor' onclick='setTheme("spor")'>SPICE ORANGE</div>
+			<div class='spgh' onclick='setTheme("spgh")'>Spaghetti</div>
+			<div class='psn5' onclick='setTheme("psn5")'>Persona 5</div>
+			<div class='psn3' onclick='setTheme("psn3")'>Persona 3</div>
 			<div class='konb' onclick='setTheme("konb")'>K-ON!</div>
 		</div>
 	</div>
