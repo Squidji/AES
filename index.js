@@ -2,8 +2,7 @@ var currentsave = {
 	theme: 'aesx',
 	links: [
 		[
-			{name: 'iPass', url: 'https://ipassweb.harrisschool.solutions/school/valleytech/syslogin.html'},
-			{name: 'BVT', url: 'https://www.valleytech.k12.ma.us/'}
+			{name: 'Welcome', url: 'Welcome'}
 		],
 		[
 
@@ -22,7 +21,11 @@ function renderLinks() {
 			// Shortcuts
 			let d = $('<div>').text( l.name );
 			d.addClass('link');
-			d.click(function () { window.open(l.url, '_blank'); });
+			if (l.url === 'Welcome') {
+				d.click(function () { toggleMenu() });
+			} else if (l.url !== '') {
+				d.click(function () { window.open(l.url, '_blank'); });
+			};
 			$('#shortcuts').append(d);
 
 			// Links Menu
