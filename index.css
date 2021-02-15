@@ -79,6 +79,7 @@ h1 {
 
 #menu .menupage {
 	animation: fadeIn 0.3s;
+	scrollbar-width: thin;
 }
 
 #menu .topbutton {
@@ -143,10 +144,10 @@ h1 {
 }
 #menu .itemslist div#savebutton::after, #menu .itemslist div#resetbutton::after {content: '';}
 
-#menu .linklist div {
+#menu .linklist > div {
 	width: 320px;
 	border-bottom: 2px solid #cecece;
-	height: 60px;
+	min-height: 60px;
 	cursor: default;
 	transition: 0.2s;
 	display: block;
@@ -261,6 +262,11 @@ h1 {
 	text-shadow: black 1px 0, black -1px 0, black 0 1px, black 0 -1px, 
 		black 1px 1px, black -1px -1px, black 1px -1px, black -1px 1px;
 }
+#menu .themelist div.mtrl {
+	background-image: url('./img/mtrl_banner.jpg');
+	font-family: OpenSans;
+	background-size: cover;
+}
 
 #menu #themes, #menu #links {overflow: hidden; overflow-y: scroll; height: 100%;}
 
@@ -271,7 +277,7 @@ h1 {
 
 @font-face {
 	font-family: Rajdhani;
-	src: url(./fonts/Rajdhani-Regular.ttf)
+	src: url(./fonts/Rajdhani-Regular.ttf);
 }
 
 @font-face {
@@ -317,4 +323,9 @@ h1 {
 @font-face {
 	font-family: Stars;
 	src: url(./fonts/Atures.ttf);
+}
+
+@font-face {
+	font-family: OpenSans;
+	src: url(./fonts/OpenSans-SemiBold.ttf);
 }

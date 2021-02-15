@@ -295,30 +295,49 @@ body.psn3 .link::after {
 }
 body.psn3 .link:hover::after {background-color: #ffcb61}
 
-body.star {
-	font-family: Stars;
-	background-image: url('./img/space.jpg');
+body.mtrl {
+	background-color: #16191a;
+	font-family: OpenSans;
+	margin: 0;
 }
-body.star .link {
-	border-width: 1px;
-	color: #20ff51;
-	border-color: #20ff51;
-	opacity: 0.6;
-	font-size: 30px;
+body.mtrl h1 {
+	position: relative;
+	text-align: left;
+	margin: 100px 0 100px 100px;
 }
-body.star .link:hover {
-	color: #06200c;
-	background-color: white;
-	border-color: white;
-	opacity: 1;
+body.mtrl #shortcuts {
+	margin-left: 100px;
+	position: relative;
+	top: 0; left: 0; right: 0;
 }
-
-body.spgh {
-	font-family: "Comic Sans MS", cursive, sans-serif;
-	background-image: url('./img/spaghetti.png');
-	text-shadow: black 1px 0, black -1px 0, black 0 1px, black 0 -1px, 
-		black 1px 1px, black -1px -1px, black 1px -1px, black -1px 1px;
+body.mtrl .link {
+	position: relative;
+	font-size: 20px;
+	width: 250px;
+	height: unset;
+	line-height: unset;
+	border-radius: 0;
+	text-align: left;
+	display: block;
+	padding: 15px;
+	border-color: #2b2b2b;
+	background-color: #16191a;
 }
-body.spgh .link{
-	font-size: 30px;
+body.mtrl h1::after {
+	display: block !important;
+	position: fixed;
+	background-color: #0188b2;
+	width: 40%;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	content: '';
+	z-index: -1;
+}
+body.mtrl #menubutton {
+	top: 20px;
+	right: 20px;
+	color: #16191a;
+	border: solid 2px #16191a;
+	padding: 10px 20px 10px 20px;
 }
