@@ -19,7 +19,8 @@ function renderLinks() {
 			let l = currentsave.links[n][i];
 
 			// Shortcuts
-			let d = $('<div>').text( l.name );
+			let d = $('<div>');
+			d.append( $('<span>').text(l.name) );
 			d.addClass('link');
 			if (l.url === 'Welcome') {
 				d.click(function () { toggleMenu() });
