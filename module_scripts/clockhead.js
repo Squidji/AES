@@ -21,7 +21,6 @@ _modules.clockhead['startRun'] = function () {
 		if (hour === 0) {
 			hour = 12;
 		};
-		console.log(minute.length);
 		if (minute.length === 1) {
 			minute = '0' + minute;
 		};
