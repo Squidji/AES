@@ -21,7 +21,8 @@ _modules.clockhead['startRun'] = function () {
 		if (hour === 0) {
 			hour = 12;
 		};
-		if (minute.length = 1) {
+		console.log(minute.length);
+		if (minute.length === 1) {
 			minute = '0' + minute;
 		};
 		$('#HEADER #hour').text(hour);
