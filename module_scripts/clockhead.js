@@ -14,12 +14,15 @@ _modules.clockhead['startRun'] = function () {
 	_modules.clockhead['TIMER_Clock'] = setInterval(function() {
 		let date = new Date();
 		let hour = date.getHours();
-		let minute = date.getMinutes();
+		let minute = '' + date.getMinutes();
 		if (hour > 12) {
 			hour -= 12;
 		};
 		if (hour === 0) {
 			hour = 12;
+		};
+		if (minute.length = 1) {
+			minute = '0' + minute;
 		};
 		$('#HEADER #hour').text(hour);
 		$('#HEADER #minute').text(minute);
