@@ -312,6 +312,32 @@ h1 {
 	height: 350px;
 }
 
+#menu_modules .itemslist div {
+	width: 307px;
+	border: solid 2px gray;
+	color: gray;
+}
+#menu .itemslist div:hover {
+	width: 297px;
+	letter-spacing: 2px;
+}
+
+#menu_modules .itemslist div[value='false'] {
+	border-color: red;
+	color: red;
+}
+#menu_modules .itemslist div[value='false']::after {
+	content: '✖';
+}
+
+#menu_modules .itemslist div[value='true'] {
+	border-color: green;
+	color: green;
+}
+#menu_modules .itemslist div[value='true']::after {
+	content: '✓';
+}
+
 @keyframes fadeIn {
 	from {opacity: 0;}
 	to {opacity: 1;}

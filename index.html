@@ -11,6 +11,7 @@
 	<script src='./ace-editor/ext-language_tools.js'></script>
 	<script src='./index.js'></script>
 	<script src='./customtheme.js'></script>
+	<script src='./module_scripts/clockhead.js'></script>
 </head>
 <body class='aesx'>
 
@@ -27,6 +28,7 @@
 		<div class='itemslist'>
 			<div onclick='openMenu("links")'>Links</div>
 			<div onclick='openMenu("themes")'>Themes</div>
+			<div onclick='openMenu("modules")'>Modules</div>
 			<div onclick='openMenu("other")'>Other</div>
 		</div>
 		<div id='credit'>Developed by 
@@ -117,6 +119,14 @@
 		<div class='itemslist'>
 			<div onclick='currentsave.title=$("#title_input").val();renderLinks();'>Save Title</div>
 			<div onclick='resetSettings();'>Reset AESLink</div>
+		</div>
+	</div>
+
+	<div id='menu_modules' class='menupage'>
+		<div class='topbutton close' onclick='openMenu("home")'>BACK</div>
+		<div class='header'>MODULES</div>
+		<div class='itemslist'>
+			<div id='clockhead' value='false' onclick='toggleModule("clockhead")'>Clock Header</div>
 		</div>
 	</div>
 

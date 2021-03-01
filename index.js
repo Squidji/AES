@@ -1,5 +1,6 @@
 var currentsave = {
 	theme: 'aesx',
+	modules: [],
 	links: [
 		[
 			{name: 'Welcome', url: 'Welcome'}
@@ -17,8 +18,10 @@ var currentsave = {
 		}*/
 	],
 	title: 'AES',
-	data_version: 1
+	data_version: 2
 };
+
+var _modules = {};
 
 function renderLinks() {
 	$('#shortcuts').html('');
@@ -145,6 +148,7 @@ function resetSettings() {
 function saveSettings() { localStorage.setItem('saveslot', JSON.stringify(currentsave)) };
 
 function loadSettings() {
+	// Update Data from Old Versions
 	if ( localStorage.getItem('saveslot') !== null ) {
 		// Load and Update LocalStorage Settings
 		currentsave = JSON.parse(localStorage.getItem('saveslot'));
@@ -154,10 +158,42 @@ function loadSettings() {
 			currentsave.custom_themes = [];
 			saveSettings();
 		};
-
-
-		setTheme(currentsave.theme); 
+		
+		if (currentsave.data_version === 1) {
+			currentsave.data_version = 2;
+			currentsave.modules = [];
+			saveSettings();
+		}; 
 	};
+
+	// Render Page
 	renderLinks();
 	renderCustomThemeMenu();
+	setTheme(currentsave.theme);
+	renderModules();
+};
+
+function toggleModule(id) {
+	let mods = currentsave.modules;
+
+	let index = mods.indexOf(id);
+	if (index > -1) {
+		mods.splice(index, 1);
+		$('#menu_modules .itemslist #'+id).attr('value', 'false');
+		_modules[id].endRun();
+	} else {
+		mods.push(id);
+		$('#menu_modules .itemslist #'+id).attr('value', 'true');
+		_modules[id].startRun();
+	};
+
+	saveSettings();
+};
+
+function renderModules() {
+	for (let i=0; i<currentsave.modules.length; i++) {
+		let id = currentsave.modules[i];
+		$('#menu_modules .itemslist #'+id).attr('value', 'true');
+		_modules[id].startRun();
+	};
 };
