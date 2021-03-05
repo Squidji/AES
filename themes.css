@@ -322,6 +322,13 @@ body.mtrl .link {
 	padding: 15px;
 	border-color: #2b2b2b;
 	background-color: #16191a;
+	transition: 0.1s;
+}
+body.mtrl .link:hover {
+	border-color: #0188b2;
+}
+body.mtrl .link:active {
+	color: #0188b2;
 }
 body.mtrl h1::after {
 	display: block !important;

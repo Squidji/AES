@@ -3,15 +3,18 @@
 <head>
 	<title id='title'>AES</title>
 	<meta charset='utf-8'/>
-	<link href='./index.css' rel='stylesheet'>
-	<link href='./themes.css' rel='stylesheet'>
-	<link href='https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap' rel='stylesheet'>
+	<link href='./index.css' rel='stylesheet'/>
+	<link href='./themes.css' rel='stylesheet'/>
+	<link href='https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap' rel='stylesheet'/>
 	<script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
+	<script src='https://code.jquery.com/ui/1.12.1/jquery-ui.min.js'></script>
+	<link href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css' rel='stylesheet'/>
 	<script src='./ace-editor/ace.js'></script>
 	<script src='./ace-editor/ext-language_tools.js'></script>
 	<script src='./index.js'></script>
 	<script src='./customtheme.js'></script>
 	<script src='./module_scripts/clockhead.js'></script>
+	<script src='./module_scripts/stickynotes.js'></script>
 </head>
 <body class='aesx'>
 
@@ -118,15 +121,20 @@
 		<div class='inputlabel'>Title: </div><input type='text' id='title_input'>
 		<div class='itemslist'>
 			<div onclick='currentsave.title=$("#title_input").val();renderLinks();'>Save Title</div>
+			<!--<div onclick=''>Save Data</div>
+			<div onclick=''>Load Data</div>-->
 			<div onclick='resetSettings();'>Reset AESLink</div>
 		</div>
 	</div>
 
 	<div id='menu_modules' class='menupage'>
-		<div class='topbutton close' onclick='openMenu("home")'>BACK</div>
+		<div class='topbutton' onclick='openMenu("home")'>BACK</div>
 		<div class='header'>MODULES</div>
 		<div class='itemslist'>
 			<div id='clockhead' value='false' onclick='toggleModule("clockhead")'>Clock Header</div>
+			<div id='stickynotes' value='false' onclick='toggleModule("stickynotes")'>Sticky Notes</div>
+			<!-- Search Bar Header -->
+			<!-- Link Tabs -->
 		</div>
 	</div>
 

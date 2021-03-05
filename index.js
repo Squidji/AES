@@ -24,10 +24,13 @@ var currentsave = {
 var _modules = {};
 
 function renderLinks() {
+	// Clear Shortcuts
 	$('#shortcuts').html('');
 	$('#menu_links .linklist').html('');
+	// Set Header Text
 	$('#HEADER').text(currentsave.title);
 	$('#menu_other #title_input').val(currentsave.title);
+	//Create Links
 	for (let n=0; n<2; n++) { // For each row.
 		for (let i=0; i<currentsave.links[n].length; i++) { // For each link in the row
 			
@@ -102,6 +105,11 @@ function renderLinks() {
 			$('#row' + (n+1) + 'linklist').append(a);
 		};
 		$('#shortcuts').append( $('<br>') );
+	};
+	// Run Modules
+	for (let i=0; i<currentsave.modules.length; i++) {
+		let id = currentsave.modules[i];
+		_modules[id].onRender();
 	};
 };
 
